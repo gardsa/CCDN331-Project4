@@ -1,0 +1,255 @@
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #1E1E1E;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'UniNeueHeavy-Italic', sans-serif;
+  color: #3B5999;
+}
+
+h1 {
+  font-size: 70px;
+  margin: 10px 0;
+}
+h2 {font-size: 40px;}
+h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+p {line-height: 18px;}
+
+.container {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.title-content, .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+}
+
+.title-content .checkboxes {
+  padding-top: 10px;
+  transform: translate(-1000%, 0);
+}
+
+.title-screen .title-content .checkboxes {
+  transform: translate(0, 0);
+}
+
+.title-content h2 {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.title-content img {
+  width: 40px;
+  height: 40px;
+  vertical-align: top;
+  padding-right: 10px;
+}
+
+.title-content img, h2 {
+  padding-right:
+}
+
+.title-content .light {
+  font-family: 'UniNeueLight', sans-serif;
+  color: #1E1E1E;
+  transform: translate(-1000%, 0);
+}
+
+.title-screen .title-content .light {
+  transform: translate(0, 0);
+}
+
+.title-content .heavy {
+  transform: translate(1000%, 0);
+}
+
+.title-screen .title-content .heavy {
+  transform: translate(0, 0);
+}
+
+.title-content .unchecked {
+  color: #555555;
+}
+
+.button {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  color: #B0B0AF;
+  cursor: pointer;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: color .5s;
+}
+
+.button:hover {
+  color: #3B5999;
+}
+
+.first-point .title-content .light, .first-point .title-content .checkboxes {
+  animation: nudge-left 2s ease 0s 1 forwards;
+}
+
+.first-point .title-content .heavy {
+  animation: nudge-right 2s ease 0s 1 forwards;
+}
+
+.first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+  opacity: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.first-point .first-point-content {
+  animation: fade-in 2s ease .5s 1 forwards;
+}
+
+.second-point .first-point-content {
+  animation: fade-out 2s ease 0s 1 forwards;
+}
+
+.second-point .second-point-content {
+  animation: fade-in 2s ease 1s 1 forwards;
+}
+
+.third-point .second-point-content {
+  animation: fade-out 2s ease 0s 1 forwards;
+}
+
+.third-point .third-point-content {
+  animation: fade-in 2s ease 1s 1 forwards;
+}
+
+.fourth-point .third-point-content {
+  animation: fade-out 2s ease 0s 1 forwards;
+}
+
+.fourth-point .fourth-point-content {
+  animation: fade-in 2s ease 1s 1 forwards;
+}
+
+.fifth-point .fourth-point-content {
+  animation: fade-out 2s ease 0s 1 forwards;
+}
+
+.fifth-point .fifth-point-content {
+  animation: fade-in 2s ease 1s 1 forwards;
+}
+
+.references .fifth-point-content {
+  animation: fade-out 2s ease 0s 1 forwards;
+}
+
+
+
+
+@keyframes nudge-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(20px, 0);
+  }
+  100% {
+    transform: translate(-1000%, 0);
+  }
+}
+
+@keyframes nudge-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-20px, 0);
+  }
+  100% {
+    transform: translate(1000%, 0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes become-visible {
+  10% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes become-hidden {
+  10% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 640px) {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 920px) {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+    width: 70%;
+  }
+  h3 {
+    font-size: 34px;
+    margin: 15px 0;
+  }
+  p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+    width: 50%;
+  }
+}
