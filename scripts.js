@@ -3,6 +3,7 @@
   d.getElementById('continueBtn').addEventListener('click', function(){
     var screenClass = d.body.classList;
 
+    d.getElementById('continueBtn').innerHTML = '<< continue >>';
     if (screenClass.contains('title-screen')) {
       screenClass.remove('title-screen');
       screenClass.add('first-point');
@@ -32,9 +33,14 @@
       screenClass.add('quiz-2');
     }
     else if (screenClass.contains('quiz-2')) {
+      d.getElementById('continueBtn').innerHTML = '<< return >>';
       checkboxScore();
       screenClass.remove('quiz-2');
       screenClass.add('results');
+    }
+    else if (screenClass.contains('results')) {
+      screenClass.remove('results');
+      screenClass.add('title-screen');
     }
   });
 
@@ -52,9 +58,10 @@
 
   function printScoreResults(score) {
     if (score < 7){
-      d.getElementById('results').innerHTML += 'That you design FOR people. While this has its merits, designing for people and not with them can often to lead to unhappy or dissatisfied clients or users. Try...';
+      d.getElementById('results').innerHTML += '<p>That you design FOR people. While this has its merits, designing for people and not with them can often to lead to unhappy or dissatisfied clients or users.</p>';
     } else {
-      d.getElementById('results').innerHTML += 'That you design WITH people. BLAH BLAH BLAH.';
+      d.getElementById('results').innerHTML += "<p>That you design WITH people. By carefully considering your clients' and users' wants and needs, and involving them in the design process, you are able to achieve a more satisfying outcome for eveyone involved.</p>";
     }
+    d.getElementById('results').innerHTML += '<br><p>Take a card - printed on them you will find five critical points regarding desiging WITH people.</p>';
   }
 })(document);
