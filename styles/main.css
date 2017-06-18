@@ -38,7 +38,7 @@ p {line-height: 18px;}
   transform: translate(-50%, -50%);
 }
 
-.title-content, .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+.title-content, .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .quiz-content-1, .quiz-content-2, .results-content {
   position: absolute;
   margin: 0;
   top: 50%;
@@ -111,131 +111,135 @@ p {line-height: 18px;}
   color: #3B5999;
 }
 
-.first-point .title-content .light, .first-point .title-content .checkboxes {
+.checkbox {
+  padding-bottom: 5px;
+}
+
+input[type='checkbox'] {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.intro {padding-bottom: 20px;}
+
+.quiz-1 .quiz-content-1 {
+  z-index: 999;
+}
+
+.quiz-2 .quiz-content-2 {
+  z-index: 999;
+}
+
+.first-point .first-point-content .heading,
+.first-point .first-point-content .content,
+.second-point .second-point-content .heading,
+.second-point .second-point-content .content,
+.third-point .third-point-content .heading,
+.third-point .third-point-content .content,
+.first-point .first-point-content .heading,
+.first-point .first-point-content .content,
+.first-point .first-point-content .heading,
+.first-point .first-point-content .content,
+.quiz-1 .quiz-content-1 .content,
+.quiz-1 .quiz-content-1 .heading,
+.quiz-2 .quiz-content-2 .content,
+.quiz-2 .quiz-content-2 .heading,
+.results .results-content .content,
+.results .results-content .heading  {
+  transform: translate(0, 0);
+}
+
+.first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .quiz-content-1, .quiz-content-2, .results-content {
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.first-point .first-point-content,
+.second-point .second-point-content,
+.third-point .third-point-content,
+.fourth-point .fourth-point-content,
+.fifth-point .fifth-point-content,
+.quiz-1 .quiz-content-1,
+.quiz-2 .quiz-content-2,
+.results .results-content {
+  animation: fade-in 1.2s ease .2s 1 forwards;
+}
+
+.first-point .title-content .light,
+.first-point .title-content .checkboxes,
+.second-point .first-point-content .heading,
+.third-point .second-point-content .heading,
+.fourth-point .third-point-content .heading,
+.fifth-point .fourth-point-content .heading,
+.quiz-1 .fifth-point-content .heading,
+.quiz-2 .quiz-content-1 .heading,
+.results .quiz-content-2 .heading {
   animation: nudge-left 2s ease 0s 1 forwards;
 }
 
-.first-point .title-content .heavy {
+.first-point .title-content .heavy,
+.second-point .first-point-content .content,
+.third-point .second-point-content .content,
+.fourth-point .third-point-content .content,
+.fifth-point .fourth-point-content .content,
+.quiz-1 .fifth-point-content .content,
+.quiz-2 .quiz-content-1 .content,
+.results .quiz-content-2 .content {
   animation: nudge-right 2s ease 0s 1 forwards;
 }
 
-.first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
-  opacity: 0;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.first-point .first-point-content {
-  animation: fade-in 2s ease .5s 1 forwards;
-}
-
-.second-point .first-point-content {
+.second-point .first-point-content,
+.third-point .second-point-content,
+.fourth-point .third-point-content,
+.fifth-point .fourth-point-content,
+.quiz-1 .fifth-point-content,
+.quiz-2 .quiz-content-1,
+.results .quiz-content-2 {
   animation: fade-out 2s ease 0s 1 forwards;
 }
-
-.second-point .second-point-content {
-  animation: fade-in 2s ease 1s 1 forwards;
-}
-
-.third-point .second-point-content {
-  animation: fade-out 2s ease 0s 1 forwards;
-}
-
-.third-point .third-point-content {
-  animation: fade-in 2s ease 1s 1 forwards;
-}
-
-.fourth-point .third-point-content {
-  animation: fade-out 2s ease 0s 1 forwards;
-}
-
-.fourth-point .fourth-point-content {
-  animation: fade-in 2s ease 1s 1 forwards;
-}
-
-.fifth-point .fourth-point-content {
-  animation: fade-out 2s ease 0s 1 forwards;
-}
-
-.fifth-point .fifth-point-content {
-  animation: fade-in 2s ease 1s 1 forwards;
-}
-
-.references .fifth-point-content {
-  animation: fade-out 2s ease 0s 1 forwards;
-}
-
-
 
 
 @keyframes nudge-left {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(20px, 0);
-  }
-  100% {
-    transform: translate(-1000%, 0);
-  }
+  0% {transform: translate(0, 0);}
+  10% {transform: translate(20px, 0);}
+  100% {transform: translate(-1000%, 0);}
 }
 
 @keyframes nudge-right {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-20px, 0);
-  }
-  100% {
-    transform: translate(1000%, 0);
-  }
+  0% {transform: translate(0, 0);}
+  10% {transform: translate(-20px, 0);}
+  100% {transform: translate(1000%, 0);}
 }
 
 @keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @keyframes become-visible {
-  10% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
+  10% {visibility: hidden;}
+  100% {visibility: visible;}
 }
 
 @keyframes become-hidden {
-  10% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
+  10% {visibility: visible;}
+  100% {visibility: hidden;}
 }
 
 @media (min-width: 640px) {
-  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .quiz-content-1, .quiz-content-2, .results-content {
     width: 80%;
   }
 }
 
 @media (min-width: 920px) {
-  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .quiz-content-1, .quiz-content-2, .results-content {
     width: 70%;
   }
   h3 {
@@ -249,7 +253,7 @@ p {line-height: 18px;}
 }
 
 @media (min-width: 1200px) {
-  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .references-content {
+  .first-point-content, .second-point-content, .third-point-content, .fourth-point-content, .fifth-point-content, .quiz-content-1, .quiz-content-2, .results-content {
     width: 50%;
   }
 }
