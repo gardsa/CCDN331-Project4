@@ -1,33 +1,32 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3407827, 2017-06-16T22:45:14-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: UniNeueHeavy-Italic by Fontfabric
  * URL: https://www.myfonts.com/fonts/font-fabric/uni-neue/heavy-italic/
- * 
+ *
  * Webfont: UniNeueLight by Fontfabric
  * URL: https://www.myfonts.com/fonts/font-fabric/uni-neue/light/
- * 
- * 
+ *
+ *
  * License: https://www.myfonts.com/viewlicense?type=web&buildid=3407827
  * Licensed pageviews: Unlimited
  * Webfonts copyright: Copyright (c) 2017 by Fontfabric LLC. All rights reserved.
- * 
+ *
  * © 2017 MyFonts Inc
 */
 
 
 
 
-  
-@font-face {font-family: 'UniNeueHeavy-Italic';src: url('webfonts/33FFD3_0_0.eot');src: url('webfonts/33FFD3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33FFD3_0_0.woff2') format('woff2'),url('webfonts/33FFD3_0_0.woff') format('woff'),url('webfonts/33FFD3_0_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'UniNeueLight';src: url('webfonts/33FFD3_1_0.eot');src: url('webfonts/33FFD3_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33FFD3_1_0.woff2') format('woff2'),url('webfonts/33FFD3_1_0.woff') format('woff'),url('webfonts/33FFD3_1_0.ttf') format('truetype');}
- 
+
+@font-face {font-family: 'UniNeueHeavy-Italic'; src: url('webfonts/33FFD3_0_0.eot'); src: url('webfonts/33FFD3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33FFD3_0_0.woff2') format('woff2'),url('webfonts/33FFD3_0_0.woff') format('woff'),url('webfonts/33FFD3_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'UniNeueLight'; src: url('webfonts/33FFD3_1_0.eot'); src: url('webfonts/33FFD3_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33FFD3_1_0.woff2') format('woff2'),url('webfonts/33FFD3_1_0.woff') format('woff'),url('webfonts/33FFD3_1_0.ttf') format('truetype');}
