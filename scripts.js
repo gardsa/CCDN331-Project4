@@ -39,8 +39,7 @@
       screenClass.add('results');
     }
     else if (screenClass.contains('results')) {
-      screenClass.remove('results');
-      screenClass.add('title-screen');
+      location.reload();
     }
   });
 
